@@ -1,0 +1,5 @@
+
+
+RewriteEngine on
+
+Rewriterule ^articulos/(.+)/ articulos.php?id=$1

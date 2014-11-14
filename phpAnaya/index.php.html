@@ -1,0 +1,147 @@
+<?php
+function negrita($cadena){
+	echo  "</br><b>$cadena</b></br>";		
+}
+
+echo "version de ZEND FRAMWORK ES = ";negrita(zend_version());
+
+
+//Creando ARRAy
+
+
+$color = array("amarillo","verde","rosa","negro","naranja");
+$c = count($color);
+for($i=0; $i<(count($color)); $i++ ){
+	negrita($color[$i]);
+	if($i>2){echo "se aplico BREAK";break;}
+}
+
+$arreglo = range(2, 15);
+
+print_r($arreglo);
+
+
+
+//-- in_array
+if(in_array("amarill", $color))//BUSCA DENTRO DE array
+negrita("se encontro EL color");
+else
+negrita("no se encontro el color");
+
+echo ($color)?"hay datos TRUE" :"NO hay DATOS false";
+
+
+//RAND
+rand(0, 10);
+
+//VER FECHA
+negrita ("FECHA ACTUAL");ECHO date(m);echo date(d);echo date(y);
+
+
+//FACIL PARa INTRODUCIR HTML
+$html = <<<inicio
+<hr>
+<h1>hola php</h1>
+<br>
+<input type ="text" value="hola mundo"/>
+<ul id="lista_ul">
+	<li>lista 1</li>
+	<li>lista 2</li>
+</ul>
+<hr>
+inicio;
+
+echo  $html;
+
+
+
+
+
+ECHO "<HR>";
+$salto_linea ="\n"; 
+$cadena = " cadena con varios espacios en blanco " ; 
+echo $salto_linea . $cadena . " tamaño: " . strlen($cadena); 
+echo "<br>"; 
+echo $salto_linea . ltrim($cadena) . " tamaño: " . 
+strlen(ltrim($cadena)); 
+echo "<br>"; 
+echo $salto_linea . chop($cadena) . " tamaño: " . 
+strlen(chop($cadena)); 
+echo "<br>"; 
+echo $salto_linea . trim($cadena) . " tamaño: " . 
+strlen(trim($cadena)); 
+
+
+ECHO "<HR>";
+echo"<H2>PILA EN PHP</H2>";
+
+$pila = array(); 
+array_push($pila,"uno","dos","tres");
+array_push($pila,"cuatro","cinco"); 
+while ($valor = array_pop($pila) ) { 
+echo "valor extraído es $valor<br>"; 
+}
+
+
+//----------------
+
+ECHO "<HR>";
+function recorre ($numero) { 
+foreach ($numero as $indice => $valor) { 
+echo "$indice: $valor<br>";
+} 
+} 
+$pila = array("cinco" =>5,"uno" =>l, "cuatro" =>4,"dos" =>2 , "tres" =>3) ; 
+echo "Array sin ordenar<br>" ; 
+recorre($pila); 
+echo "Ordenación asort()<br>" ; 
+asort($pila); 
+recorre($pila); 
+echo "Ordenación arsort{)<br>" ; 
+arsort($pila); 
+recorre($pila); 
+echo "Ordenación ksort()<br>"; 
+ksort($pila); 
+recorre ($pila) ; 
+echo "Ordenación krsort()<br>"; 
+krsort ($pila);
+recorre($pila); 
+echo "Ordenación sort()<br>"; 
+sort($pila); 
+recorre($pila); 
+echo "Ordenación rsort()<br>"; 
+rsort($pila); 
+recorre($pila); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
